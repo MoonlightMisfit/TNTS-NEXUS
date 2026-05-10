@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "aileron", sans-serif;
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+body {
+    padding: 0px;
+    background-color: #e8e8e8;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.maincontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding:20px;
+}
+
+.tnts-container{
+    height: 200px;
+    width:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tnts-container img{
+    width: 300px;
+    height: auto;
+    border: 3px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tnts-text{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+    text-align: justify;
+    padding:5px;
+}
+
+.signin-container {
+    background-color: #841b1e;
+    border-radius: 15px;
+    color: white;
+    grid-row: 1 / 3; 
+    grid-column: 3;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 50px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 10px 10px 2px 0px rgba(59, 13, 13, 0.548);
+    width: 300px;
+}
+
+.signin-container h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+}
+
+.form-links a {
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.signin-btn {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background: #470205;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    color: #e8e8e8;
+    background: #350003;
+}
