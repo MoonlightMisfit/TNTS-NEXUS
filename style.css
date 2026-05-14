@@ -30,9 +30,8 @@ h1 {
 
 .maincontent{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto auto;
-    gap: 10px;
+    grid-template: 1fr 1fr / 1fr 1fr / 1fr;
+    gap: 15px;
     padding:20px;
 }
 
@@ -42,6 +41,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:10px;
 }
 
 .tnts-container img{
@@ -49,6 +49,7 @@ h1 {
     height: auto;
     border: 3px solid white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin: 10px;
 }
 
 .tnts-text{
@@ -60,18 +61,20 @@ h1 {
 }
 
 .signin-container {
-    background-color: #841b1e;
+    background-color: #aa2529;
     border-radius: 15px;
     color: white;
     grid-row: 1 / 3; 
     grid-column: 3;
-    border: 2px solid rgb(0, 0, 0);
     margin: 50px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: 10px 10px 2px 0px rgba(59, 13, 13, 0.548);
+    box-shadow: 0px 0px 40px 5px rgba(59, 13, 13, 0.548);
     width: 300px;
+    height: 350px;
 }
+
+/* Sign in form :D */
 
 .signin-container h2 {
     margin-bottom: 25px;
@@ -82,6 +85,7 @@ h1 {
 .input-group {
     text-align: left;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .input-group label {
@@ -95,7 +99,19 @@ h1 {
     padding: 10px;
     border: 2px solid black;
 }
+.input-group input#password {
+    padding-right: 40px;
+}
+.input-group img{
+    position: absolute; 
+    cursor:pointer;
+    width:25px;
+    height:auto;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
 
+}
 .form-links {
     display: flex;
     justify-content: space-between;
@@ -121,6 +137,55 @@ h1 {
 }
 
 .signin-btn:hover {
+    color: #e8e8e8;
+    background: #350003;
+}
+
+/* Forget password :D */
+
+.forget-password-container , .cant-signin-container{
+    background-color: #aa2529;
+    border-radius: 15px;
+    color: white;
+    grid-row: 1 / 3; 
+    grid-column: 3;
+    margin: 50px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 40px 5px rgba(59, 13, 13, 0.548);
+    width: 300px;
+    height: 350px;
+}
+
+.forget-password-container h2, .cant-signin-container h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.forget-password-container p , .cant-signin-container p{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: #e8e8e8;
+    text-align: center;
+}
+.highlight {
+    color: #e8e8e8;
+    font-weight: bold;
+}
+.back-btn {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background: #470205;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-btn:hover {
     color: #e8e8e8;
     background: #350003;
 }
