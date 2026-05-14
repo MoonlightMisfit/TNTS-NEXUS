@@ -5,6 +5,7 @@
     <title>TNTS NEXUS LOG IN</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://typekit.net">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header class="navbar">
@@ -25,20 +26,24 @@
             </div>
         </div>
         
-    <aside class="signin-container">
+    <aside class="signin-container" id="signin-form">
             <h2>Portal Login</h2>
             <form>
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" required>
+                    <input type="email" placeholder="Enter your Email" required>
                 </div>
+
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" required>
+                    <input type="password" placeholder="Enter your Password" id="password" required>
+                    <img src="slash-eye.svg" id="eyeicon">
+
                 </div>
+
                 <div class="form-links">
-                    <a href="#">Forgot Password?</a>
-                    <a href="#">Can't Sign in?</a>
+                    <a href="javascript:void(0)" onclick="showForgot()">Forgot Password?</a>
+                    <a href="javascript:void(0)" onclick="showCantSignin()">Can't Sign in?</a>
                 </div>
                 <button type="submit" class="signin-btn">Sign in</button>
             </form>
@@ -56,6 +61,30 @@
             </div>
         </div>
 
+        <aside class="forget-password-container" id="forget-form" style="display:none;">
+            <h2>Can't Sign in?</h2>
+            <form>
+                <div>
+                    <p>Go to the <span class="highlight">TNTS registrar</span> in order to reset your password. </p>
+                    <br>
+                    <p>You must have your <span class="highlight">Student ID</span> and <span class="highlight">Email Address</span> presented.</p>
+                </div>
+                <button type="button" class="back-btn" onclick="showLogin()">Back to Sign in</button>
+            </form>
+        </aside>
+
+        <aside class="cant-signin-container" id="cant-signin-form" style="display:none;">
+            <h2>Can't Sign in?</h2>
+            <form>
+                <div>
+                    <p>Your account creation may still be in progress.It may take 1-2 business days.</p>
+                    <br>
+                    <p>If there's a delay, please contact the <span class="highlight">TNTS registrar</span> for assistance.</p>
+                </div>
+                <button type="button" class="back-btn" onclick="showLogin1()">Back to Sign in</button>
+            </form>
+        </aside>
     </div>
+    <script src="script.js" defer></script>
     </body>
 </html>
